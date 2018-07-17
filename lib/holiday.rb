@@ -102,7 +102,7 @@ def all_holidays_with_bbq(holiday_hash)
   
   holiday_hash.each do |season, holiday|
     holiday.each do |holiday, item|
-      #print item
+    
       if item.include?("BBQ") == true
         bbq_holidays.push(holiday)
         
@@ -112,27 +112,3 @@ def all_holidays_with_bbq(holiday_hash)
   bbq_holidays
 end
 
-
-
-#given that holiday_hash looks like this:
-
-holiday_hash =   {
-     :winter => {
-       :christmas => ["Lights", "Wreath"],
-       :new_years => ["Party Hats"]
-     },
-     :summer => {
-       :fourth_of_july => ["Fireworks", "BBQ"]
-     },
-     :fall => {
-       :thanksgiving => ["Turkey"]
-     },
-     :spring => {
-       :memorial_day => ["BBQ"]
-     }
-   }
-
-#puts holiday_hash
-##puts second_supply_for_fourth_of_july(holiday_hash)
-##puts holiday_hash[:surummer][:fourth_of_july][1]
-all_holidays_with_bbq(holiday_hash)
